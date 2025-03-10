@@ -124,7 +124,7 @@ body {
 }
 
 /* Desktop Layout */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .cards-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -153,8 +153,19 @@ body {
 }
 
 /* Medium Screens Layout */
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 899px) {
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* Hover Effects */
+.card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+    cursor: pointer;
 }
