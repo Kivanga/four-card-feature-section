@@ -19,3 +19,106 @@
     --fw-extra-regular: 400;
     --fw-extra-semi-bold: 600;
 }
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-size);
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+/* Mobile First Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-weight: var(--fw-extra-light);
+    color: var(--grey-500);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.title span:last-child {
+    font-weight: var(--fw-extra-semi-bold);
+    display: block;
+}
+
+.subtitle {
+    color: var(--grey-400);
+    font-weight: var(--fw-extra-regular);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Card Grid */
+.cards-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.card-title {
+    color: var(--grey-500);
+    margin-bottom: .5rem;
+    font-weight: var(--fw-extra-semi-bold);
+}
+
+.card-text {
+    color: var(--grey-400);
+    font-size: .9rem;
+    margin-bottom: 2rem;
+}
+
+.card-icon {
+    display: block;
+    margin-left: auto;
+}
+
+/* Category Styles */
+.supervisor::before {
+    background: var(--cyan);
+}
+
+.team-builder::before {
+    background: var(--red);
+}
+
+.karma::before {
+    background: var(--orange);
+}
+
+.calculator::before {
+    background: var(--blue);
+}
